@@ -23,7 +23,6 @@ builder.Services.AddOllamaEmbeddingGenerator(
 
 // Configurar Qdrant Vector Store (liga à porta gRPC 6334 do teu contentor Docker)
 builder.Services.AddSingleton(new QdrantClient("localhost", 6334));
-builder.Services.AddQdrantVectorStore();
 
 // Registar os nossos serviços
 builder.Services.AddScoped<PdfService>();
